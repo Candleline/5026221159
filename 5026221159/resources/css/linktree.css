@@ -1,0 +1,60 @@
+/* linktree.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333333; /* Full dark grey background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile {
+    text-align: center; /* Center text horizontally */
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #ddd; /* Optional border */
+}
+
+.name {
+    font-size: 28px;
+    margin: 10px 0 5px;
+    color: #ffffff; /* White color for the name text */
+    text-align: center; /* Center text horizontally */
+}
+
+.description {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link {
+    display: block;
+    background-color: #444444; /* Dark grey background */
+    color: #ffffff; /* White text color */
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 2px solid #ffffff; /* White border (outline) */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.link:hover {
+    background-color: #555555; /* Slightly lighter dark grey on hover */
+    transform: scale(1.05);
+}
