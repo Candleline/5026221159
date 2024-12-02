@@ -9,21 +9,16 @@
 @section('konten')
 
 	<br/>
-    
 	<form action="/pegawai/cari" method="GET">
-    <div class="row mb-3">
+        <div class="row mb-3">
             <label for="nama" class="col-sm-2 col-form-label">Cari Nama Pegawai :</label>
             <div class="col-sm-6">
-             
-			  <input type="text" name="cari" class="form-control" id="nama" placeholder="Cari Pegawai .." value="{{ old('cari') }}">
+              <input type="text" name="cari" class="form-control" id="cari" placeholder="Cari Pegawai .." value="{{ old('cari') }}">
             </div>
-			<div class="col-sm-4">
-             
-			<input type="submit" value="CARI" class="btn btn-success">
-		   </div>
-          </div>
-	
-
+            <div class="col-sm-4">
+                <input type="submit" value="CARI" class="btn btn-success">
+            </div>
+        </div>
 	</form>
 	<br/>
 
@@ -44,7 +39,7 @@
 			<td>
 				<a href="/pegawai/edit/{{ $p->pegawai_id }}" class="btn btn-info"><i class="fa-solid fa-pen-to-square"></i></a>
 				|
-				<a href="/pegawai/hapus/{{ $p->pegawai_id }}" class="btn btn-danger"><i class="fa-solid fa-trash"></i</a>
+				<a href="/pegawai/hapus/{{ $p->pegawai_id }}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
 			</td>
 		</tr>
 		@endforeach

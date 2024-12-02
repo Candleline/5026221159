@@ -1,16 +1,16 @@
 @extends('template')
 
-@section('tulisan1','Data Pegawai')
+@section('tulisan1','Data Penggaris')
 
 @section('link1')
-<a href="/pegawai"> Kembali</a>
+<a href="/penggaris"> Kembali</a>
 @endsection
 
 @section('konten')
-	@foreach($pegawai as $p)
-	<form action="/pegawai/update" method="post">
+	@foreach($penggaris as $p)
+	<form action="/penggaris/update" method="post">
 		{{ csrf_field() }}
-		<input type="hidden" name="id" value="{{ $p->pegawai_id }}"> <br/>
+		<input type="hidden" name="id" value="{{ $p->penggaris_id }}"> <br/>
 		<div class="row mb-3">
             <label for="nama" class="col-sm-2 col-form-label">Nama</label>
             <div class="col-sm-10">
@@ -18,21 +18,21 @@
             </div>
           </div>
           <div class="row mb-3">
-            <label for="jabatan" class="col-sm-2 col-form-label">Jabatan</label>
+            <label for="kode" class="col-sm-2 col-form-label">Kode</label>
             <div class="col-sm-10">
-              <input type="text" name="jabatan" class="form-control" id="jabatan" required="required" value="{{ $p->pegawai_jabatan }}">
+              <input type="text" name="kode" class="form-control" id="jabatan" required="required" value="{{ $p->kode_penggaris }}">
             </div>
           </div>
           <div class="row mb-3">
-            <label for="umur" class="col-sm-2 col-form-label">Umur</label>
+            <label for="stok" class="col-sm-2 col-form-label">Stok</label>
             <div class="col-sm-10">
-              <input type="number" name="umur" class="form-control" id="umur" required="required" value="{{ $p->pegawai_umur }}">
+              <input type="number" name="stok" class="form-control" id="stok" required="required" value="{{ $p->penggaris_stok }}">
             </div>
           </div>
           <div class="row mb-3">
-            <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
+            <label for="merk" class="col-sm-2 col-form-label">Merk</label>
             <div class="col-sm-10">
-              <textarea name="alamat" class="form-control" id="alamat" required="required">{{ $p->pegawai_alamat }}</textarea>
+              <textarea name="merk" class="form-control" id="merk" required="required">{{ $p->penggaris_merk }}</textarea>
             </div>
           </div>
           <div class="row mb-3">
@@ -44,3 +44,5 @@
 	</form>
 	@endforeach
 	@endsection
+
+

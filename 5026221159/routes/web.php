@@ -31,7 +31,7 @@ Route::get('dosen', 'App\Http\Controllers\DosenController@index');
 Route::get('blog2', 'App\Http\Controllers\DosenController@blog');
 Route::get('biodata', 'App\Http\Controllers\DosenController@biodata');
 
-Route::get('/pegawai/{nama}', 'App\Http\Controllers\PegawaiController@index');
+//Route::get('/pegawai/{nama}', 'App\Http\Controllers\PegawaiController@index');
 Route::get('/formulir', 'App\Http\Controllers\PegawaiController@formulir');
 Route::post('/formulir/proses', 'App\Http\Controllers\PegawaiController@proses');
 
@@ -71,3 +71,12 @@ Route::get('/pegawai/edit/{id}','App\Http\Controllers\PegawaiDBController@edit')
 Route::post('/pegawai/update','App\Http\Controllers\PegawaiDBController@update');
 Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiDBController@hapus');
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiDBController@cari');
+
+
+Route::get('/penggaris','App\Http\Controllers\PenggarisDBController@index2'); //ganti semua route PegawaiDB
+Route::get('/penggaris/tambah','App\Http\Controllers\PenggarisDBController@tambah2'); //PR Tambahin edit save sama delete
+Route::post('/penggaris/store','App\Http\Controllers\PenggarisDBcontroller@store');
+Route::get('/penggaris/edit/{id}','App\Http\Controllers\PenggarisDBController@edit2');
+Route::post('/penggaris/update','App\Http\Controllers\PenggarisDBController@update');
+Route::get('/penggaris/hapus/{id}','App\Http\Controllers\PenggarisDBController@hapus');
+Route::get('/penggaris/cari','App\Http\Controllers\PenggarisDBController@cari');
