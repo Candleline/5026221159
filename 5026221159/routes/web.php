@@ -74,9 +74,14 @@ Route::get('/pegawai/cari','App\Http\Controllers\PegawaiDBController@cari');
 
 
 Route::get('/penggaris','App\Http\Controllers\PenggarisDBController@index2'); //ganti semua route PegawaiDB
-Route::get('/penggaris/tambah','App\Http\Controllers\PenggarisDBController@tambah2'); //PR Tambahin edit save sama delete
+Route::get('/penggaris/tambah2','App\Http\Controllers\PenggarisDBController@tambah2'); //PR Tambahin edit save sama delete
 Route::post('/penggaris/store','App\Http\Controllers\PenggarisDBcontroller@store');
-Route::get('/penggaris/edit/{id}','App\Http\Controllers\PenggarisDBController@edit2');
+Route::get('/penggaris/edit2/{id}','App\Http\Controllers\PenggarisDBController@edit2');
 Route::post('/penggaris/update','App\Http\Controllers\PenggarisDBController@update');
 Route::get('/penggaris/hapus/{id}','App\Http\Controllers\PenggarisDBController@hapus');
-Route::get('/penggaris/cari','App\Http\Controllers\PenggarisDBController@cari');
+Route::get('/penggaris/cari2','App\Http\Controllers\PenggarisDBController@cari');
+
+use App\Http\Controllers\KeranjangBelanjaController;
+
+Route::resource('keranjang', KeranjangBelanjaController::class);
+

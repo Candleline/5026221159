@@ -42,9 +42,9 @@
 			<td>{{ $p->stok_penggaris }}</td>
 			<td>{{ $p->tersedia_penggaris }}</td>
 			<td>
-				<a href="/pegawai/edit/{{ $p->penggaris_id }}" class="btn btn-info"><i class="fa-solid fa-pen-to-square"></i></a>
+				<a href="/penggaris/edit2/{{ $p->penggaris_id }}" class="btn btn-info"><i class="fa-solid fa-pen-to-square"></i></a>
 				|
-				<a href="/pegawai/hapus/{{ $p->penggaris_id }}" class="btn btn-danger"><i class="fa-solid fa-trash"></i</a>
+				<a href="/penggaris/hapus/{{ $p->penggaris_id }}" class="btn btn-danger"><i class="fa-solid fa-trash"></i</a>
 			</td>
 		</tr>
 		@endforeach
