@@ -85,3 +85,11 @@ use App\Http\Controllers\KeranjangBelanjaController;
 
 Route::resource('keranjang', KeranjangBelanjaController::class);
 
+
+use App\Http\Controllers\KaryawanController;
+
+Route::get('/karyawan', [KaryawanController::class, 'index'])->name('karyawan.index');
+Route::get('/karyawan/create', [KaryawanController::class, 'create'])->name('karyawan.create');
+Route::post('/karyawan', [KaryawanController::class, 'store'])->name('karyawan.store');
+Route::delete('/karyawan/{id}', [KaryawanController::class, 'destroy'])->name('karyawan.destroy');
+
